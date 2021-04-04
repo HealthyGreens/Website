@@ -219,3 +219,117 @@ margin-top: 200px;
 a {
     color: white;
 }
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}    
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+section{
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(247,220,180);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.accordion-item{
+    background-color: rgb(78, 99, 80);;
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+}
+
+.accordion-link{
+    font-size: 1.6rem;
+    color: black;
+    text-decoration: none;
+    background-color: dark;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+/* This is for the symbols(+/-) */
+.accordion-link i{
+    color: black;
+    padding: .5rem;
+}
+
+.accordion-link .ion-md-remove{
+    display: none;
+}
+/* This is for whats hidden at first then revealed when you click the dropdown */
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #212838;
+    transition: max-height 650ms;
+}
+
+.answer::before{
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 90%;
+    background-color: rgb(92, 117, 94);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer p{
+    color: rgba(255,255,255,.6);
+    font-size: 1.4rem;
+    padding: 2rem;
+}
+
+.accordion-item:target .answer{
+    max-height: 20rem;
+}
+
+.accordion-item:target .accordion-link .ion-md-add{
+    display: none;
+}
+
+.accordion-item:target .accordion-link .ion-md-remove{
+    display: block;
+}
+
+footer {
+
+    margin-top: 100px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(169,125,93);
+    position:absolute;
+    bottom: 0;
+
+}
+
+.footer_nav {
+
+    background-color: rgb(71, 71, 71);
+    position: relative;
+    bottom: 0;
+
+}
