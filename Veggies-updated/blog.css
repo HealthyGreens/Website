@@ -15,6 +15,7 @@ nav {
     width: 100%;
     height: 100px;
     background-color: rgb(169,125,93);
+    margin-bottom: 100px;
 
 }
 a {
@@ -221,4 +222,42 @@ margin-top: 200px;
 }
 a {
     color: white;
+}
+
+.blog_header {
+    text-align: center;
+    width: 100%;
+    color: black;
+
+}
+
+.blog_table {
+    margin-top: 1%;
+    width: 45%;
+}
+
+.info_blog {
+    padding: 1.5%;
+    color: black;
+    text-indent: 50px;
+}
+hr {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.plant1 {
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+    position: absolute;
+    float: left;
+}
+
+
+.plant2 {
+    margin-top: 1.5%;
+    margin-left: 80%;
+    position: absolute;
+    float: right;
+    
 }
