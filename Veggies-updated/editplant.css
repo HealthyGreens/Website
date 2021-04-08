@@ -6,7 +6,7 @@
 
 }
 body {
-    background-color: rgb(247,220,180);
+    background-color: white;
 }
 
 nav {
@@ -197,7 +197,7 @@ td {
 
 .blog_lines {
 
-border: 1px solid black;
+border: 2px solid black;
 width: 99.9%;
 width: 40%;
 margin-right: 30%;

@@ -6,7 +6,7 @@
 }
 body {
 
-    background-color: rgb(247,220,180);
+    background-color: white;
 
 }
 a {
@@ -120,7 +120,7 @@ nav {
 
         border-radius: 6px;
         width: 40%;
-        height: 600px;
+        height: 650px;
         padding: 0;
         margin: 0;
         margin-top: 150px;
