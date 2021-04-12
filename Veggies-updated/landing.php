@@ -39,12 +39,6 @@
 
 <div class = "info">
 
-<h1 class= "info-header">Plant Name</h1>
-<h1 class= "info-header">Water Amount(oz)</h1>
-<h1 class= "info-header">Water Frequency(days)</h1>
-<h1 class= "info-header">Comments</h1>
-
-<hr class = "info-line">
 
 <?php
 $servername = "127.0.0.1";
@@ -68,7 +62,32 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      echo  " <div class = one><p class = name>" . $row["pName"]. "</p></div><div class = two><p class = amnt> " . $row["pAmnt"]. "</p></div><div class = three><p class = freq> " . $row["Freq"]. "</p></div><div class = four><p class = addit> " . $row["addit"]." </P></div><hr class = info-line>";
+      
+    
+    ?>
+    
+    
+    <table>
+
+    <tr>
+
+    <td><input type = "checkbox" name = "radio"></td>
+
+    <td><?php echo $row['pName']?> </td>
+
+    <td><?php echo $row['pAmnt']?> </td>
+
+    <td><?php echo $row['Freq']?> </td>
+
+    <td><?php echo $row['addit']?> </td>
+
+    </tr>
+
+    </table>
+    
+    
+    
+    <?php
     }
   } else {
     echo "There is no existing plant data";

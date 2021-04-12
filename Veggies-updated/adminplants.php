@@ -1,4 +1,3 @@
-
 <html>
     <head>
 
@@ -50,7 +49,7 @@ session_start();
 
 $ret = $_SESSION['row'];
 $myusername = $ret["Username"] ;
-$sql= "SELECT * FROM users ";
+$sql= "SELECT * FROM plants ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -58,30 +57,29 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
 
 
-
-
-
 ?>
 
-    <form action="adminuserupdate.php" method="post">
+    <form action="adminplantupdate.php" method="post">
         <table>
 
             <tr>
+
+            <td><input type = "hidden" name = "id" placeholder = "id" value = <?php echo $row['id']; ?>></td>
                 
-                <td><input type = "text" name = "FirstName" placeholder = "First Name" value = <?php echo $row['FirstName']; ?>></td>
+            <td><input type = "text" name = "Username" placeholder = "Username" value = <?php echo $row['Username']; ?>></td>
 
-                <td><input type = "text" name = "LastName" placeholder = "Last Name" value = <?php echo $row['LastName']; ?>></td>
+            <td><input type = "text" name = "pName" placeholder = "Plant Name" value = <?php echo $row['pName']; ?>></td>
 
-                <td><input type = "text" name = "Email" placeholder = "Email" value = <?php echo $row['Email']; ?>></td>
+            <td><input type = "number" name = "pAmnt" placeholder = "Amount" value = <?php echo $row['pAmnt']; ?>></td>
 
-                <td><?php echo $row['Username']; ?></td>
+            <td><input type = "number" name = "Freq" placeholder = "Freq" value = <?php echo $row['Freq']; ?>></td>
 
-                <td><input type = "text" name = "Password" placeholder = "Password" value = <?php echo $row['Password']; ?>></td>
+            <td><input type = "text" name = "addit" placeholder = "Comments" value = <?php echo $row['addit']; ?>></td>
 
-                <td><input type = "submit" value= "Update"></td>
+            <td><input type = "submit" value= "Update"></td>
 
                 <?php
-                echo "<td><a href=deleteuser.php?id=".$row['Email']." class=btn btn-danger>Delete</a></td>";
+                echo "<td><a href=admindeleteplant.php?id=".$row['id']." class=btn btn-danger>Delete</a></td>";
                 ?>
 
                 <td>
@@ -100,7 +98,7 @@ if ($result->num_rows > 0) {
 <?php
   } 
 }else {
-    echo "There is no existing users";
+    echo "There is no existing plants";
   }
 
 ?>

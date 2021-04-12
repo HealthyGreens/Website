@@ -307,3 +307,15 @@ margin-top: 200px;
 a {
     color: white;
 }
+
+.btn {
+    background-color: rgb(255, 58, 58);
+    color: white;
+    font-weight: bold;
+}
+
+.btn:hover {
+    color: white;
+    transition-delay: .1s;
+    background-color: rgb(255, 36, 36);
+}

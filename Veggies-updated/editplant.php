@@ -36,6 +36,70 @@
 
         </nav>
 
+        <?php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "mysql";
+$dbname = "veggies";
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+ die("Connection failed: " . mysqli_connect_error());
+}
+?>
+
+<?php
+session_start();
+
+$ret = $_SESSION['row'];
+$myusername = $ret["Username"];
+$sql= "SELECT * FROM plants WHERE Username ='$myusername'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+
+
+?>
+
+    <form action="updateplant.php" method="post">
+        <table>
+
+            <tr>
+                
+            <td><input type="text" name = "pName" placeholder="Plant Name" value = <?php echo $row['pName']; ?>></td>
+
+            <td><input type="number" name = "pAmnt" placeholder="Water Amount (oz)" value = <?php echo $row['pAmnt']; ?>></td>
+
+            <td><input type="number" name = "Freq" placeholder = "Watering Freq" value = <?php echo $row['Freq']; ?>></td>
+
+            <td><input type="textarea" name = "addit" placeholder= "Comments" value = <?php echo $row['addit']; ?>></td>
+
+            <td><input type="hidden" name = "id" placeholder= "ID" value = <?php echo $row['id']; ?>></td>
+
+            <td><input type = "submit" value= "Update"></td>
+
+            <?php
+            echo "<td><a href=deleteplant.php?id=".$row['id']." class=btn btn-danger>Delete</a></td>";
+            ?>
+
+
+            </tr>
+
+    
+    </table>
+
+    </form>
+
+<?php
+  } 
+}else {
+    echo "There is no existing users";
+  }
+
+?>
+
                             
 
 
