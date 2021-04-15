@@ -23,9 +23,11 @@
                     <div class="dropdown-content">
                       <a href="newplant.php">New Plant</a>
                       <a href="editplant.php">Edit Plant</a>
+                      
                     </div>
                   </div>
                 <li class="ul_li_a"><a href="blog.html">Blog</a></li>
+                <li class="ul_li_right"><a href="index.html"><button class="login_button login_position">Log Out</button></a></li>
 
     
 
@@ -36,7 +38,7 @@
         </nav>
 
 
-
+<div class = "bigole">
 <div class = "info">
 
 
@@ -54,6 +56,7 @@ if (!$conn) {
 
 <?php
 session_start();
+date_default_timezone_set('America/New_York');
 $ret = $_SESSION['row'];
 $myusername = $ret["Username"] ;
 $sql= "SELECT * FROM plants WHERE Username ='$myusername'";
@@ -67,23 +70,60 @@ if ($result->num_rows > 0) {
     ?>
     
     
-    <table>
 
-    <tr>
 
-    <td><input type = "checkbox" name = "radio"></td>
 
-    <td><?php echo $row['pName']?> </td>
+    <?php
 
-    <td><?php echo $row['pAmnt']?> </td>
+    $currdate = date("z") + 1;
 
-    <td><?php echo $row['Freq']?> </td>
+    $newdate = 105;
 
-    <td><?php echo $row['addit']?> </td>
+    while ($newdate < 366) {
 
-    </tr>
+      if ($currdate==$newdate) { ?>
 
-    </table>
+<table>
+
+<tr>
+
+
+<td><input type = "checkbox" name = "check"></td>
+
+<td><?php echo $row['pName']?> </td>
+
+<td><?php echo $row['pAmnt']?> </td>
+
+<td><?php echo $row['Freq']?> </td>
+
+<td><?php echo $row['addit']?> </td>
+
+
+
+</tr>
+
+</table>
+
+  
+<?php
+      }
+      else {
+
+        echo "not working";
+
+      }
+
+    echo "<br>";
+
+    echo $newdate;
+
+    $newdate = $newdate + $row['Freq'];
+
+
+    }
+
+
+    ?>
     
     
     
@@ -95,7 +135,34 @@ if ($result->num_rows > 0) {
 
 ?>
 
+
 </div>
+
+<div class = "minfo">
+
+<table>
+
+<tr>
+
+
+<td><input type = "checkbox" name = "check"></td>
+
+<td><?php echo $row['pName']?> </td>
+
+<td><?php echo $row['pAmnt']?> </td>
+
+<td><?php echo $row['Freq']?> </td>
+
+<td><?php echo $row['addit']?> </td>
+
+
+
+</tr>
+
+</table>
+
+</div>
+</
 
         <footer>
 
