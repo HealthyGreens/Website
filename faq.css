@@ -1,0 +1,335 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+body {
+    background-color: rgb(247,220,180);
+}
+
+nav {
+
+    width: 100%;
+    height: 100px;
+    background-color:  rgb(169,125,93);
+
+}
+
+ul li {
+
+    list-style:none;
+    display: inline-block;
+    line-height: 100px;
+    font-weight: bold;  
+
+}
+
+ul li a {
+
+    margin-left: 200px;
+    font-size: 30px;
+    font-family: Arial;
+    color: white;
+    padding: 0 20px;
+
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: rgb(169,125,93);
+    color: white;
+    padding: 16px;
+    font-size: 30px;
+    border: none;
+    font-weight: bold;
+    outline: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 200px;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(92, 117, 94);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: rgb(78, 99, 80);}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: none;}
+
+  footer {
+
+    margin-top: 200px;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(169,125,93);
+    position: relative;
+    bottom: 0;
+
+}
+table {
+
+    margin-left: auto;
+    margin-right: auto;
+    
+
+} 
+th {
+
+    color: white;
+    padding: 6px;
+    text-align: left;
+    width: 400px;
+    height: 30px;
+    font-size: 32px;
+
+}
+td {
+
+    color: white;
+    padding: 6px;
+    text-align: left;
+    width: 400px;
+    height: 10px;
+    font-size: 20px;
+
+}
+
+.h1_footer {
+
+    margin-top: 40px;
+    margin-left: 220px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+
+}
+
+footer {
+
+    margin-top: 200px;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(169,125,93);
+    position: relative;
+    bottom: 0;
+
+}
+.footer_nav {
+
+    background-color: rgb(169,125,93);
+    position: relative;
+    bottom: 0;
+
+}
+ul li {
+
+    list-style: none;
+    display: inline-block;
+    line-height: 100px;
+    font-weight: bold;  
+
+}
+.ul_li_left {
+
+    float: left;
+
+}
+.ul_li_right {
+
+    
+    float: right;
+    margin-right: 60px;
+
+}
+ul li a {
+
+    font-size: 30px;
+    font-family: Arial;
+    color: white;
+    padding: 0 20px;
+
+}
+
+table {
+
+    margin-left: auto;
+    margin-right: auto;
+    
+
+} 
+th {
+
+    color: white;
+    padding: 6px;
+    text-align: left;
+    width: 400px;
+    height: 30px;
+    font-size: 32px;
+
+}
+td {
+
+    color: white;
+    padding: 6px;
+    text-align: left;
+    width: 400px;
+    height: 10px;
+    font-size: 20px;
+
+}
+
+.blog_lines {
+
+border: 1px solid black;
+width: 99.9%;
+width: 40%;
+margin-right: 30%;
+margin-left: 30%;
+margin-top: 200px;
+
+}
+
+a {
+    color: white;
+}
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}    
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+section{
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(247,220,180);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.accordion-item{
+    background-color: rgb(78, 99, 80);;
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+}
+
+.accordion-link{
+    font-size: 1.6rem;
+    color: black;
+    text-decoration: none;
+    background-color: dark;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+/* This is for the symbols(+/-) */
+.accordion-link i{
+    color: black;
+    padding: .5rem;
+}
+
+.accordion-link .ion-md-remove{
+    display: none;
+}
+/* This is for whats hidden at first then revealed when you click the dropdown */
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #212838;
+    transition: max-height 650ms;
+}
+
+.answer::before{
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 90%;
+    background-color: rgb(92, 117, 94);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer p{
+    color: rgba(255,255,255,.6);
+    font-size: 1.4rem;
+    padding: 2rem;
+}
+
+.accordion-item:target .answer{
+    max-height: 20rem;
+}
+
+.accordion-item:target .accordion-link .ion-md-add{
+    display: none;
+}
+
+.accordion-item:target .accordion-link .ion-md-remove{
+    display: block;
+}
+
+footer {
+
+    margin-top: 100px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(169,125,93);
+    position:absolute;
+    bottom: 0;
+
+}
+
+.footer_nav {
+
+    background-color: rgb(71, 71, 71);
+    position: relative;
+    bottom: 0;
+
+}
