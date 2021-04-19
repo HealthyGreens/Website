@@ -69,19 +69,47 @@ if ($result->num_rows > 0) {
     
     ?>
     
-    
-
-
 
     <?php
 
-    $currdate = date("z") + 1;
+    $currdate = date("Y-m-d");
 
-    $newdate = 105;
+    $setdate = $row['Date'];
 
-    while ($newdate < 366) {
+      if ($currdate==$setdate) { 
 
-      if ($currdate==$newdate) { ?>
+        echo $setdate;
+        //format it into d-m-y 
+        echo "<br>";
+        echo $setdate = date("d-m-Y");
+        //add the freq
+        echo "<br>";
+        echo $setdate = $setdate + $row['Freq'];
+        //convert to string
+        echo $setdate = strval($row['Freq']);
+        //take the current day and add it to the freq
+
+        //place in format
+        echo "<br>";
+        echo $setdate = date("$setdate-m-Y"); 
+        //format it back to y-m-d
+        echo "<br>";
+        echo $setdate = date("Y-m-d");
+        
+        $some = "UPDATE plants SET Date = '2021-04-19' WHERE id = '$row[id]'";
+
+        if($conn->query($some))
+{
+
+}
+else
+{ 
+    echo "Not Updating";
+}
+
+
+
+        ?>
 
 <table>
 
@@ -96,7 +124,10 @@ if ($result->num_rows > 0) {
 
 <td><?php echo $row['Freq']?> </td>
 
+<td><?php echo $row['Date']?> </td>
+
 <td><?php echo $row['addit']?> </td>
+
 
 
 
@@ -106,21 +137,13 @@ if ($result->num_rows > 0) {
 
   
 <?php
+
       }
+
       else {
-
-        echo "not working";
-
+        break;
       }
-
     echo "<br>";
-
-    echo $newdate;
-
-    $newdate = $newdate + $row['Freq'];
-
-
-    }
 
 
     ?>
@@ -153,6 +176,8 @@ if ($result->num_rows > 0) {
 
 <td><?php echo $row['Freq']?> </td>
 
+<td><?php echo $row['Date']?> </td>
+
 <td><?php echo $row['addit']?> </td>
 
 
@@ -162,7 +187,6 @@ if ($result->num_rows > 0) {
 </table>
 
 </div>
-</
 
         <footer>
 
