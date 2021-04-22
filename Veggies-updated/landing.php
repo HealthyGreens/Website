@@ -76,25 +76,10 @@ if ($result->num_rows > 0) {
 
     $setdate = $row['Date'];
 
-      if ($currdate==$setdate) { 
+      if ($currdate==$setdate) {
 
-        echo $setdate;
-        //format it into d-m-y 
-        echo "<br>";
-        echo $setdate = date("d-m-Y");
-        //add the freq
-        echo "<br>";
-        echo $setdate = $setdate + $row['Freq'];
-        //convert to string
-        echo $setdate = strval($row['Freq']);
-        //take the current day and add it to the freq
-
-        //place in format
-        echo "<br>";
-        echo $setdate = date("$setdate-m-Y"); 
-        //format it back to y-m-d
-        echo "<br>";
-        echo $setdate = date("Y-m-d");
+        $setdate= date('d-m-Y', strtotime($setdate. ' + 90 days'));
+        echo $setdate
         
         $some = "UPDATE plants SET Date = '2021-04-19' WHERE id = '$row[id]'";
 
