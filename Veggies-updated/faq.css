@@ -6,14 +6,15 @@
 
 }
 body {
-    background-color: rgb(247,220,180);
+    background-color: rgb(215, 220, 210);
+    font-family:Arial;
 }
 
 nav {
 
     width: 100%;
     height: 100px;
-    background-color:  rgb(169,125,93);
+    background-color:  rgb(245, 245, 245);
 
 }
 
@@ -31,15 +32,15 @@ ul li a {
     margin-left: 200px;
     font-size: 30px;
     font-family: Arial;
-    color: white;
+    color: black;
     padding: 0 20px;
 
 }
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: rgb(169,125,93);
-    color: white;
+    background-color: rgb(245, 245, 245);
+    color: black;
     padding: 16px;
     font-size: 30px;
     border: none;
@@ -58,7 +59,7 @@ ul li a {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(92, 117, 94);
+    background-color: rgb(215, 220, 210);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -74,7 +75,7 @@ ul li a {
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: rgb(78, 99, 80);}
+  .dropdown-content a:hover {background-color: rgb(215, 220, 210)}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
@@ -87,7 +88,7 @@ ul li a {
     margin-top: 200px;
     width: 100%;
     height: 400px;
-    background-color: rgb(169,125,93);
+    background-color: rgb(245, 245, 245);
     position: relative;
     bottom: 0;
 
@@ -99,26 +100,7 @@ table {
     
 
 } 
-th {
 
-    color: white;
-    padding: 6px;
-    text-align: left;
-    width: 400px;
-    height: 30px;
-    font-size: 32px;
-
-}
-td {
-
-    color: white;
-    padding: 6px;
-    text-align: left;
-    width: 400px;
-    height: 10px;
-    font-size: 20px;
-
-}
 
 .h1_footer {
 
@@ -127,25 +109,16 @@ td {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 24px;
-    color: white;
+    color: black;
 
 }
 
-footer {
 
-    margin-top: 200px;
-    width: 100%;
-    height: 400px;
-    background-color: rgb(169,125,93);
-    position: relative;
-    bottom: 0;
-
-}
 .footer_nav {
 
-    background-color: rgb(169,125,93);
+    background-color: rgb(245, 245, 245);
     position: relative;
-    bottom: 0;
+    bottom: 1;
 
 }
 ul li {
@@ -168,14 +141,7 @@ ul li {
     margin-right: 60px;
 
 }
-ul li a {
 
-    font-size: 30px;
-    font-family: Arial;
-    color: white;
-    padding: 0 20px;
-
-}
 
 table {
 
@@ -186,7 +152,7 @@ table {
 } 
 th {
 
-    color: white;
+    color: black;
     padding: 6px;
     text-align: left;
     width: 400px;
@@ -196,7 +162,7 @@ th {
 }
 td {
 
-    color: white;
+    color: black;
     padding: 6px;
     text-align: left;
     width: 400px;
@@ -217,7 +183,7 @@ margin-top: 200px;
 }
 
 a {
-    color: white;
+    color: black;
 }
 *::before,
 *::after{
@@ -235,7 +201,7 @@ html{
 section{
     width: 100%;
     height: 60vh;
-    background-color: rgb(247,220,180);
+    background-color: rgb(215, 220, 210);;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -249,7 +215,7 @@ section{
 }
 
 .accordion-item{
-    background-color: rgb(78, 99, 80);;
+    background-color: rgb(245, 245, 245);
     border-radius: .4rem;
     margin-bottom: 1rem;
     padding: 2rem;
@@ -267,7 +233,7 @@ section{
     justify-content: space-between;
     padding: 1rem 0;
 }
-/* This is for the symbols(+/-) */
+/* This is for the symbols() */
 .accordion-link i{
     color: black;
     padding: .5rem;
@@ -290,7 +256,7 @@ section{
     position: absolute;
     width: .6rem;
     height: 90%;
-    background-color: rgb(92, 117, 94);
+    background-color: rgb(215, 220, 210);
     top: 50%;
     left: 0;
     transform: translateY(-50%);
@@ -314,22 +280,5 @@ section{
     display: block;
 }
 
-footer {
 
-    margin-top: 100px;
-    margin-bottom: 0px;
-    width: 100%;
-    height: 300px;
-    background-color: rgb(169,125,93);
-    position:absolute;
-    bottom: 0;
 
-}
-
-.footer_nav {
-
-    background-color: rgb(71, 71, 71);
-    position: relative;
-    bottom: 0;
-
-}
