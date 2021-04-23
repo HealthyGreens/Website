@@ -24,12 +24,23 @@
 
                       <li class = "ul li"><a href="adminplants.php">Plants<a></li>
 
+                      <a href="index.html"><button class="login_button login_position">Log Out</button></a>
             </ul>
 
 
         </nav>
 
+        <table class = "second-table">
+    <tr>
 
+        <th class = "th-table">Username</th>
+        <th class = "th-table">Plant Name</th>
+        <th class = "th-table">Watering Amount</th>
+        <th class = "th-table">Watering Frequency</th>
+        <th class = "th-table">Comments</th>
+
+</tr>
+    </table>
 
 
 <?php
@@ -59,14 +70,16 @@ if ($result->num_rows > 0) {
 
 ?>
 
+
     <form action="adminplantupdate.php" method="post">
         <table>
 
+
             <tr>
 
-            <td><input type = "hidden" name = "id" placeholder = "id" value = <?php echo $row['id']; ?>></td>
+            <td><input class = "hidden" type = "hidden" name = "id" placeholder = "id" value = <?php echo $row['id']; ?>></td>
                 
-            <td><input type = "text" name = "Username" placeholder = "Username" value = <?php echo $row['Username']; ?>></td>
+            <td><?php echo $row['Username']; ?></td>
 
             <td><input type = "text" name = "pName" placeholder = "Plant Name" value = <?php echo $row['pName']; ?>></td>
 
@@ -74,9 +87,9 @@ if ($result->num_rows > 0) {
 
             <td><input type = "number" name = "Freq" placeholder = "Freq" value = <?php echo $row['Freq']; ?>></td>
 
-            <td><input type = "text" name = "addit" placeholder = "Comments" value = <?php echo $row['addit']; ?>></td>
+            <td><?php echo $row['addit']; ?></td>
 
-            <td><input type = "submit" value= "Update"></td>
+            <td><input class = "update" type = "submit" value= "Update"></td>
 
                 <?php
                 echo "<td><a href=admindeleteplant.php?id=".$row['id']." class=btn btn-danger>Delete</a></td>";
@@ -107,23 +120,33 @@ if ($result->num_rows > 0) {
 
 </div>
 
+        <!--This section is for the footer and some random links we choose-->
         <footer>
 
 
-            <!--This is the table section of the footer-->
-    
-    
-               <br><br><br>
-               <table border="0">
-                <tr><th>Documentation</th><th>Partners</th><th><a href = "faq.html">FAQ</a></th></tr>
-                <tr><td>Source code</td><td>Ian</td><td>stuff</td></tr>
-                <tr><td>Images</td><td>Kaden</td><td>stuff</td></tr>
-                <tr><td>Uses</td><td>Jason</td><td>stuff</td></tr>
-                <tr><td>Additional</td><td>Geno</td><td>stuff</td></tr>
-               </table>
-               <h1 class="h1_footer">Healthy Greens</h1>
-               
-           </footer>
+<!--This is the table section of the footer-->
+
+
+   <br><br><br>
+   <table border="0">
+    <tr><th>Documentation</th><th>Partners</th><th><a href = "faq.html">FAQ</a></th></tr>
+    <tr><td>Source code</td><td>Ian</td><td></td></tr>
+    <tr><td>Images</td><td>Kaden</td><td></td></tr>
+    <tr><td></td></td><td>Jason</td><td></td></tr>
+    <tr><td></td></td><td>Geno</td><td></td></tr>
+   </table>
+   
+
+   <!--This is the sign up so far-->
+
+
+   <nav class="footer_nav">
+       <ul>
+        <li class="ul_li_left" style="margin-left: 200px;">Healthy Greens</li>
+        
+       </ul>
+   </nav>
+</footer>
 
 
 

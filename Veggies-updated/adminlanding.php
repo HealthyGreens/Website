@@ -25,10 +25,26 @@
 
                       <li class = "ul li"><a href="adminplants.php">Plants<a></li>
 
+                      <a href="index.html"><button class="login_button login_position">Log Out</button></a>
+
             </ul>
+
+            
 
 
         </nav>
+
+        <table class = "second-table">
+    <tr>
+
+        <th class = "th-table">Firstname</th>
+        <th class = "th-table">Lastname</th>
+        <th class = "th-table">Email</th>
+        <th class = "th-table">Username</th>
+        <th class = "th-table">Password</th>
+
+</tr>
+    </table>
 
 
 
@@ -64,7 +80,7 @@ if ($result->num_rows > 0) {
 ?>
 
     <form action="adminuserupdate.php" method="post">
-        <table>
+        <table class = "main-table">
 
             <tr>
                 
@@ -78,7 +94,7 @@ if ($result->num_rows > 0) {
 
                 <td><input type = "text" name = "Password" placeholder = "Password" value = <?php echo $row['Password']; ?>></td>
 
-                <td><input type = "submit" value= "Update"></td>
+                <td><input class = "update" type = "submit" value= "Update"></td>
 
                 <?php
                 echo "<td><a href=deleteuser.php?id=".$row['Email']." class=btn btn-danger>Delete</a></td>";
@@ -109,23 +125,33 @@ if ($result->num_rows > 0) {
 
 </div>
 
+        <!--This section is for the footer and some random links we choose-->
         <footer>
 
 
-            <!--This is the table section of the footer-->
-    
-    
-               <br><br><br>
-               <table border="0">
-                <tr><th>Documentation</th><th>Partners</th><th><a href = "faq.html">FAQ</a></th></tr>
-                <tr><td>Source code</td><td>Ian</td><td>stuff</td></tr>
-                <tr><td>Images</td><td>Kaden</td><td>stuff</td></tr>
-                <tr><td>Uses</td><td>Jason</td><td>stuff</td></tr>
-                <tr><td>Additional</td><td>Geno</td><td>stuff</td></tr>
-               </table>
-               <h1 class="h1_footer">Healthy Greens</h1>
-               
-           </footer>
+<!--This is the table section of the footer-->
+
+
+   <br><br><br>
+   <table border="0">
+    <tr><th>Documentation</th><th>Partners</th><th><a href = "faq.html">FAQ</a></th></tr>
+    <tr><td>Source code</td><td>Ian</td><td></td></tr>
+    <tr><td>Images</td><td>Kaden</td><td></td></tr>
+    <tr><td></td></td><td>Jason</td><td></td></tr>
+    <tr><td></td></td><td>Geno</td><td></td></tr>
+   </table>
+   
+
+   <!--This is the sign up so far-->
+
+
+   <nav class="footer_nav">
+       <ul>
+        <li class="ul_li_left" style="margin-left: 200px;">Healthy Greens</li>
+        
+       </ul>
+   </nav>
+</footer>
 
 
 
