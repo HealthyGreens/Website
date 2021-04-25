@@ -6,16 +6,16 @@
 }
 body {
 
-    background-color: white;
+    background-color: rgb(215, 220, 210);
 
 }
 a {
-    color: white;
+    color: black;
 }
 
 .login_button {
 
-    background-color: rgb(156,159,132);
+    background-color: rgb(245, 245, 245);
     border: none;
     text-align: center;
     width: 130px;
@@ -26,21 +26,23 @@ a {
     outline: none;
     font-weight: bold;
     cursor: pointer;
-    color: white;
+    color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     
     
 }
 .login_button:hover {
 
-    background-color: rgb(92,117,94);
-    color: white;
+    background-color: rgb(215, 220, 210);
+    color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
 }
 nav {
     
     width: 100%;
     height: 100px;
-    background-color: rgb(169,125,93);
+    background-color: rgb(245, 245, 245);
 
 }
 .table_links {
@@ -127,8 +129,8 @@ nav {
         margin-bottom: 200px;
         margin-left: 30%;
         position: absolute;
-        background: rgb(92,117,93);
-        box-shadow: 3px 3px 20px;
+        background: rgb(245, 245, 245);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     }
     
     .h1_signup {
@@ -193,7 +195,7 @@ nav {
     
         margin-top: 100px;
         margin-left: 15%;
-        background-color: rgb(247,220,180);
+        background-color: rgb(245, 245, 245);
         border: none;
         text-align: center;
         width: 130px;
@@ -205,20 +207,22 @@ nav {
         font-weight: bold;
         cursor: pointer;
         color: black;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         
     }
     
     #boxbutton:hover {
     
-        background-color: rgb(169,125,93);
-        color: black;    
+        background-color: rgb(215, 220, 210);
+        color: black;   
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
     
     
     }
     
     .body_two {
     
-        background-color: coral;
+        background-color: rgb(215, 220, 210);
     
     
     }
@@ -255,14 +259,14 @@ nav {
         margin-top: 200px;
         width: 100%;
         height: 400px;
-        background-color: rgb(169,125,93);
+        background-color: rgb(245, 245, 245);
         position: relative;
         bottom: 0;
     
     }
     .footer_nav {
 
-        background-color: rgb(169,125,93);
+        background-color: rgb(245, 245, 245);
         position: relative;
         bottom: 0;
     
@@ -291,7 +295,7 @@ nav {
     
         font-size: 30px;
         font-family: Arial;
-        color: white;
+        color: black;
         padding: 0 20px;
     
     }
@@ -306,7 +310,7 @@ nav {
     th {
     
         font-family: Arial, Helvetica, sans-serif;
-        color: white;
+        color: black;
         padding: 6px;
         text-align: left;
         width: 400px;
@@ -316,7 +320,7 @@ nav {
     }
     td {
     
-        color: white;
+        color: black;
         padding: 6px;
         text-align: left;
         width: 400px;

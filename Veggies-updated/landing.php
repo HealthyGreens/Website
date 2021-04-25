@@ -37,10 +37,9 @@
 
         </nav>
 
+        <div class = "minfo">
 
-<div class = "bigole">
-<div class = "info">
-
+        <h1>All Plants</h1>
 
 <?php
 $servername = "127.0.0.1";
@@ -53,6 +52,9 @@ if (!$conn) {
  die("Connection failed: " . mysqli_connect_error());
 }
 ?>
+
+        <!--Query for displaying all of the plants-->
+
 
 <?php
 session_start();
@@ -68,33 +70,9 @@ if ($result->num_rows > 0) {
       
     
     ?>
-    
 
-    <?php
+    <!--All plants-->
 
-    $currdate = date("Y-m-d");
-
-    $setdate = $row['Date'];
-
-      if ($currdate==$setdate) {
-
-        $setdate= date('d-m-Y', strtotime($setdate. ' + 90 days'));
-        echo $setdate
-        
-        $some = "UPDATE plants SET Date = '2021-04-19' WHERE id = '$row[id]'";
-
-        if($conn->query($some))
-{
-
-}
-else
-{ 
-    echo "Not Updating";
-}
-
-
-
-        ?>
 
 <table>
 
@@ -115,40 +93,87 @@ else
 
 
 
-
 </tr>
 
 </table>
 
-  
-<?php
 
-      }
-
-      else {
-        break;
-      }
-    echo "<br>";
-
-
-    ?>
-    
-    
-    
     <?php
     }
-  } else {
+    } else {
     echo "There is no existing plant data";
-  }
+    }
 
-?>
+    ?>
+ </div>
+
+ <div class = "info">
+
+ <h1>Todays Plants</h1>
 
 
-</div>
+    <?php
 
-<div class = "minfo">
+date_default_timezone_set('America/New_York');
+$currdate = date("Y-m-d");
+$ret = $_SESSION['row'];
+$myusername = $ret["Username"] ;
+$sql= "SELECT * FROM plants WHERE Date = '$currdate' AND Username ='$myusername'";
+$result = $conn->query($sql);
 
-<table>
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+      
+    
+    ?>
+    
+
+        <!--Query for updating the dates-->
+
+
+        <?php
+
+
+
+$currdate = date("Y-m-d");
+
+$permdate = date("23:59:00");
+
+$setdate = $row['Date'];
+
+  if ($currdate==$setdate) { 
+
+    $setdate;
+    //format it into d-m-y 
+    echo "<br>";
+    $setdate = date("d-m-Y");
+    //add the freq
+    echo "<br>";
+    $setdate = $row['Freq'];
+    //convert to string
+    $setdate = strval($setdate);
+    //Test
+    $setdate = date(("Y-m-d"), strtotime("+ $setdate days"));
+
+    if(time() >= strtotime($permdate)){
+    
+    $some = "UPDATE plants SET Date = '$setdate' WHERE id = '$row[id]'";
+
+    if($conn->query($some))
+        {
+          header('location:landing.php');
+        }
+        else
+        { 
+        echo "Not Updating";
+        }
+      }
+        ?>
+
+        <!--Todays plants-->
+
+        <table>
 
 <tr>
 
@@ -167,11 +192,30 @@ else
 
 
 
+
 </tr>
 
 </table>
 
+
+
+<?php
+    
+       } else {
+      break;
+    }
+  echo "<br>";
+  }
+  }else {
+    echo "There is no existing plant data";
+    }
+
+  ?>
+
+
 </div>
+
+
 
         <footer>
 

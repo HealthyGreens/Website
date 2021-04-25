@@ -46,6 +46,8 @@
                             
                             <input type="number" name = "Freq" placeholder = "Watering Freq">
 
+                            <input type ="date" name="Date">
+
                             <input type="textarea" name = "addit" placeholder= "Comments" >
 
                             <input type="submit" value="Enter" id="boxbutton">
@@ -94,17 +96,17 @@ $Username=$ret["Username"];
 $pName=$_POST["pName"];
 $pAmnt=$_POST["pAmnt"];
 $Freq=$_POST["Freq"];
+$Date=$_POST["Date"];
 $addit=$_POST["addit"];
 
 
-$sql = "INSERT INTO plants( Username ,pName, pAmnt, Freq, addit) VALUES ('$Username','$pName','$pAmnt','$Freq','$addit')";
+$sql = "INSERT INTO plants( Username ,pName, pAmnt, Freq, Date , addit) VALUES ('$Username','$pName','$pAmnt','$Freq','$Date','$addit')";
 
 if($conn->query($sql) === TRUE) {
 echo "New plant entered!";
 header("location:newplant.php");
 }
 else{
-echo "Error: " .$sql. "<br>" .$conn->error;
 }
 
 $conn->close();

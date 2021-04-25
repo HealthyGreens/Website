@@ -7,14 +7,14 @@
 }
 
 body {
-    background-color: white;
+    background-color: rgb(215, 220, 210);
 }
 
 nav {
 
     width: 100%;
     height: 100px;
-    background-color: rgb(169,125,93);
+    background-color: rgb(245, 245, 245);
 
 }
 
@@ -32,15 +32,15 @@ ul li a {
     margin-left: 200px;
     font-size: 30px;
     font-family: Arial;
-    color: white;
+    color: black;
     padding: 0 20px;
 
 }
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: rgb(169,125,93);
-    color: white;
+    background-color: rgb(245, 245, 245);
+    color: black;
     padding: 16px;
     font-size: 30px;
     border: none;
@@ -59,7 +59,7 @@ ul li a {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(92, 117, 94);
+    background-color: rgb(215, 220, 210);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -75,7 +75,7 @@ ul li a {
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: rgb(78, 99, 80);}
+  .dropdown-content a:hover {background-color: rgb(215, 220, 210);}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
@@ -103,7 +103,8 @@ ul li a {
     margin-bottom: 400px;
     margin-left: 30%;
     position: absolute;
-    background: rgb(92,117,94);
+    background: rgb(245, 245, 245);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
 }
 
@@ -131,7 +132,7 @@ ul li a {
     
     }
     
-    .box input[type="text"], .box input[type="time"] {
+    .box input[type="text"], .box input[type="time"],  [type = "date"] {
     background: none;
     display: block;
     width: 56%;
@@ -172,7 +173,7 @@ ul li a {
     
         margin-top: 100px;
         margin-left: 15%;
-        background-color: rgb(247,220,180);
+        background-color: rgb(245, 245, 245);
         border: none;
         text-align: center;
         width: 130px;
@@ -184,12 +185,14 @@ ul li a {
         font-weight: bold;
         cursor: pointer;
         color: black;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         
     }
 
     #boxbutton:hover {
-        background-color: rgb(169,125,93);
+        background-color: rgb(215, 220, 210);
         color: black;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     }
 
 
@@ -202,7 +205,7 @@ table {
 } 
 th {
 
-    color: white;
+    color: black;
     padding: 6px;
     text-align: left;
     width: 400px;
@@ -212,7 +215,7 @@ th {
 }
 td {
 
-    color: white;
+    color: black;
     padding: 6px;
     text-align: left;
     width: 400px;
@@ -228,7 +231,7 @@ td {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 24px;
-    color: white;
+    color: black;
 
 }
 
@@ -237,14 +240,14 @@ footer {
     margin-top: 1200px;
     width: 100%;
     height: 400px;
-    background-color: rgb(169,125,93);
+    background-color: rgb(245, 245, 245);
     position: relative;
     bottom: 0;
 
 }
 .footer_nav {
 
-    background-color: rgb(169,125,93);
+    background-color: rgb(245, 245, 245);
     position: relative;
     bottom: 0;
 
@@ -273,7 +276,7 @@ ul li a {
 
     font-size: 30px;
     font-family: Arial;
-    color: white;
+    color: black;
     padding: 0 20px;
 
 }
@@ -287,7 +290,7 @@ table {
 } 
 th {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: black;
     padding: 6px;
     text-align: left;
     width: 400px;
@@ -297,7 +300,7 @@ th {
 }
 td {
 
-    color: white;
+    color: black;
     padding: 6px;
     text-align: left;
     width: 400px;
@@ -317,5 +320,5 @@ margin-top: 200px;
 
 }
 a {
-    color: white;
+    color: black;
 }
